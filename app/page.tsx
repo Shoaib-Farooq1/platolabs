@@ -47,7 +47,7 @@ function BrandSplash() {
             lineHeight: 1,
             color: '#f0f0f0',
           }}>
-            Plato<span className="shimmer-text" style={{ color: '#0dc6bb' }}>Labs</span>
+            Plato<span style={{ color: '#0dc6bb' }}>Labs</span>
           </span>
         </div>
 
@@ -104,7 +104,7 @@ function HeroStatement() {
           color: '#f0f0f0',
           maxWidth: 820,
         }}>
-          Performance & Rehabilitation<br />
+          Where Rehab Meets<br />
           <span className="shimmer-text">Intelligence.</span>
         </h1>
 
@@ -115,19 +115,31 @@ function HeroStatement() {
           maxWidth: 520,
           marginBottom: '3rem',
         }}>
-          PlatoLabs is a deep-tech engineering wearable systems for rehabilitation, recovery,
-          and human performance.
+          PlatoLabs is a deep-tech hatchery engineering wearable systems for rehabilitation, recovery,
+          and human performance — starting with PL1.
         </p>
 
         <div className="animate-fade-up delay-300" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          
+          <a href="#pl1" className="btn-teal px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2">
+            Explore PL1
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
           <a href="#contact" className="btn-ghost px-7 py-3.5 rounded-full text-sm inline-flex">
             Join Waitlist
           </a>
         </div>
       </div>
 
-     
+      {/* Scroll cue */}
+      <div style={{
+        position: 'absolute', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)',
+        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem'
+      }}>
+        <span style={{ fontSize: '0.65rem', color: '#333', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Scroll</span>
+        <div style={{ width: 1, height: 48, background: 'linear-gradient(to bottom, #0dc6bb, transparent)' }} />
+      </div>
     </section>
   )
 }
@@ -135,10 +147,10 @@ function HeroStatement() {
 // ── PL1 ───────────────────────────────────────────────────────────────────────
 function PL1() {
   const features = [
-    { label: 'Motion Capture', desc: 'High performance wearable sensors capture precise full-body movement data in real time.' },
-    { label: 'Movement Learning', desc: 'Our AI pipeline learns each users unique movement signature and flags deviations instantly.' },
-    { label: 'Live Scoring', desc: 'Movement quality scored rep by rep — live, on dashboard, no delay.' },
-    { label: 'Personalised Baselines', desc: 'The system adapts to each users anatomy and style, not a one-size-fits-all norm.' },
+    { label: 'Dual IMU Sensing', desc: 'Two MPU6050 sensors capture 6-DoF motion with millisecond precision across joints.' },
+    { label: 'Autoencoder Pipeline', desc: 'A Keras-trained 300→64→16 autoencoder learns your movement signature and flags deviations in real time.' },
+    { label: 'Rep-by-Rep Scoring', desc: 'Live form scoring delivered via dashboard — no post-processing, no delay, no guesswork.' },
+    { label: 'Personalised Baselines', desc: 'The model adapts to each user\'s anatomy and movement style, not a one-size-fits-all norm.' },
   ]
 
   return (
@@ -147,11 +159,11 @@ function PL1() {
 
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h2 style={{ fontFamily: 'var(--font-space-grotesk)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: '1rem' }}>
-            The Platform: <span className="shimmer-text">PL1</span>
+            PL1
           </h2>
           <p style={{ color: '#666', maxWidth: 520, margin: '0 auto', lineHeight: 1.7, fontSize: '0.95rem' }}>
             A wearable resistance-training form analyser that gives patients and clinicians
-            real-time biomechanical feedback.
+            real-time biomechanical feedback — built on Arduino, dual IMUs, and personalised ML.
           </p>
         </div>
 
@@ -170,7 +182,12 @@ function PL1() {
         </div>
 
         <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-          
+          <a href="#contact" className="btn-teal px-8 py-4 rounded-full text-sm inline-flex items-center gap-2">
+            Request a Demo
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -182,8 +199,18 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', location: '', subject: '', message: '' })
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!form.email) return
+    try {
+      await fetch('https://script.google.com/macros/s/AKfycbyJAay4Xb_ObRyPegKXy_U_NaXQA61YqM96yOVSR06JNSv5KOr3dxlMhPQm2sdig0I0Sw/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+    } catch (e) {
+      console.error(e)
+    }
     setSubmitted(true)
   }
 
@@ -224,10 +251,10 @@ function Contact() {
             marginBottom: '1rem',
             color: '#f0f0f0',
           }}>
-            Join the <span className="shimmer-text">PL1</span> Waitlist
+            Join the <span className="shimmer-text">Dev-Kit</span> Wait List
           </h2>
           <p style={{ color: '#555', fontSize: '0.95rem', lineHeight: 1.7, maxWidth: 460, margin: '0 auto' }}>
-            Be first to get access to PL1 hardware and early research partnerships.
+            Be first to get access to PL1 hardware, SDK, and early research partnerships.
           </p>
         </div>
 
@@ -242,7 +269,7 @@ function Contact() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }}>
               <div>
                 <label style={labelStyle}>Name</label>
-                <input style={inputStyle} placeholder="Kyle Smith" value={form.name}
+                <input style={inputStyle} placeholder="Jane Smith" value={form.name}
                   onChange={e => setForm({ ...form, name: e.target.value })}
                   onFocus={e => (e.currentTarget.style.borderColor = '#0dc6bb')}
                   onBlur={e => (e.currentTarget.style.borderColor = '#1e1e1e')} />
@@ -274,7 +301,7 @@ function Contact() {
             <div style={{ marginBottom: '2rem' }}>
               <label style={labelStyle}>Tell us about yourself</label>
               <textarea style={{ ...inputStyle, height: 140, resize: 'vertical' }}
-                placeholder="Briefly describe your setting and how movement analytics could help you"
+                placeholder="Please tell us a bit about yourself and why you're interested"
                 value={form.message}
                 onChange={e => setForm({ ...form, message: e.target.value })}
                 onFocus={e => (e.currentTarget.style.borderColor = '#0dc6bb')}
@@ -303,7 +330,9 @@ function Footer() {
           PlatoLabs © {new Date().getFullYear()}
         </span>
       </div>
-      
+      <span style={{ fontSize: '0.8rem', color: '#333' }}>
+        Built with purpose. Powered by data.
+      </span>
     </footer>
   )
 }
