@@ -16,58 +16,25 @@ function BrandSplash() {
       overflow: 'hidden',
       padding: '0 1.5rem',
     }}>
-
-      {/* Grid background */}
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         backgroundImage: 'linear-gradient(rgba(13,198,187,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(13,198,187,0.03) 1px, transparent 1px)',
         backgroundSize: '80px 80px'
       }} />
-
-      {/* Glow orbs */}
       <div className="glow-orb" style={{ width: 700, height: 700, top: '-200px', left: '-300px', opacity: 0.5 }} />
       <div className="glow-orb" style={{ width: 400, height: 400, bottom: '-100px', right: '-100px', opacity: 0.3 }} />
-
       <div style={{ position: 'relative', zIndex: 1, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-
-        {/* Logo above wordmark */}
         <div className="animate-fade-up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', marginBottom: '1.5rem' }}>
-          <Image
-            src="/logo.png"
-            alt="PlatoLabs"
-            width={160}
-            height={160}
-            style={{ borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }}
-          />
-          <span style={{
-            fontFamily: 'var(--font-space-grotesk)',
-            fontWeight: 700,
-            fontSize: 'clamp(4rem, 11vw, 9rem)',
-            letterSpacing: '-0.04em',
-            lineHeight: 1,
-            color: '#f0f0f0',
-          }}>
-            Plato<span style={{ color: '#0dc6bb' }}>Labs</span>
+          <Image src="/logo.png" alt="PlatoLabs" width={160} height={160} style={{ borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
+          <span style={{ fontFamily: 'var(--font-space-grotesk)', fontWeight: 700, fontSize: 'clamp(4rem, 11vw, 9rem)', letterSpacing: '-0.04em', lineHeight: 1, color: '#f0f0f0' }}>
+            Plato<span className="shimmer-text" style={{ color: '#0dc6bb' }}>Labs</span>
           </span>
         </div>
-
-        {/* Tagline */}
-        <div className="animate-fade-up delay-200" style={{
-          fontSize: '1rem',
-          color: '#aaa',
-          letterSpacing: '0.28em',
-          textTransform: 'uppercase',
-          fontWeight: 500,
-        }}>
+        <div className="animate-fade-up delay-200" style={{ fontSize: '1rem', color: '#aaa', letterSpacing: '0.28em', textTransform: 'uppercase', fontWeight: 500 }}>
           Sense · Track · Optimise
         </div>
       </div>
-
-      {/* Scroll cue */}
-      <div style={{
-        position: 'absolute', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)',
-        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem'
-      }}>
+      <div style={{ position: 'absolute', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
         <span style={{ fontSize: '0.65rem', color: '#333', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Scroll</span>
         <div style={{ width: 1, height: 48, background: 'linear-gradient(to bottom, #0dc6bb, transparent)' }} />
       </div>
@@ -78,67 +45,19 @@ function BrandSplash() {
 // ── Section 2: Hero statement ─────────────────────────────────────────────────
 function HeroStatement() {
   return (
-    <section style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      justifyContent: 'center',
-      position: 'relative',
-      overflow: 'hidden',
-      padding: '0 1.5rem',
-      borderTop: '1px solid #1a1a1a',
-    }}>
-
+    <section style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', position: 'relative', overflow: 'hidden', padding: '0 1.5rem', borderTop: '1px solid #1a1a1a' }}>
       <div className="glow-orb" style={{ width: 500, height: 500, top: '10%', right: '-150px', opacity: 0.35 }} />
-
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 1200, width: '100%', margin: '0 auto' }}>
-
-        <h1 className="animate-fade-up" style={{
-          fontFamily: 'var(--font-space-grotesk)',
-          fontSize: 'clamp(2rem, 4.5vw, 3.8rem)',
-          fontWeight: 700,
-          lineHeight: 1.05,
-          letterSpacing: '-0.03em',
-          marginBottom: '1.5rem',
-          color: '#f0f0f0',
-          maxWidth: 820,
-        }}>
-          Where Rehab Meets<br />
+        <h1 className="animate-fade-up" style={{ fontFamily: 'var(--font-space-grotesk)', fontSize: 'clamp(2rem, 4.5vw, 3.8rem)', fontWeight: 700, lineHeight: 1.05, letterSpacing: '-0.03em', marginBottom: '1.5rem', color: '#f0f0f0', maxWidth: 820 }}>
+          Performance & Rehabilitation<br />
           <span className="shimmer-text">Intelligence.</span>
         </h1>
-
-        <p className="animate-fade-up delay-200" style={{
-          fontSize: 'clamp(1rem, 2vw, 1.2rem)',
-          color: '#666',
-          lineHeight: 1.8,
-          maxWidth: 520,
-          marginBottom: '3rem',
-        }}>
-          PlatoLabs is a deep-tech hatchery engineering wearable systems for rehabilitation, recovery,
-          and human performance — starting with PL1.
+        <p className="animate-fade-up delay-200" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: '#666', lineHeight: 1.8, maxWidth: 520, marginBottom: '3rem' }}>
+          PlatoLabs is a deep-tech engineering wearable systems for rehabilitation, recovery, and human performance.
         </p>
-
         <div className="animate-fade-up delay-300" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <a href="#pl1" className="btn-teal px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2">
-            Explore PL1
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-          <a href="#contact" className="btn-ghost px-7 py-3.5 rounded-full text-sm inline-flex">
-            Join Waitlist
-          </a>
+          <a href="#contact" className="btn-ghost px-7 py-3.5 rounded-full text-sm inline-flex">Join Waitlist</a>
         </div>
-      </div>
-
-      {/* Scroll cue */}
-      <div style={{
-        position: 'absolute', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)',
-        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem'
-      }}>
-        <span style={{ fontSize: '0.65rem', color: '#333', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Scroll</span>
-        <div style={{ width: 1, height: 48, background: 'linear-gradient(to bottom, #0dc6bb, transparent)' }} />
       </div>
     </section>
   )
@@ -147,47 +66,32 @@ function HeroStatement() {
 // ── PL1 ───────────────────────────────────────────────────────────────────────
 function PL1() {
   const features = [
-    { label: 'Dual IMU Sensing', desc: 'Two MPU6050 sensors capture 6-DoF motion with millisecond precision across joints.' },
-    { label: 'Autoencoder Pipeline', desc: 'A Keras-trained 300→64→16 autoencoder learns your movement signature and flags deviations in real time.' },
-    { label: 'Rep-by-Rep Scoring', desc: 'Live form scoring delivered via dashboard — no post-processing, no delay, no guesswork.' },
-    { label: 'Personalised Baselines', desc: 'The model adapts to each user\'s anatomy and movement style, not a one-size-fits-all norm.' },
+    { label: 'Motion Capture', desc: 'High performance wearable sensors capture precise full-body movement data in real time.' },
+    { label: 'Movement Learning', desc: 'Our AI pipeline learns each users unique movement signature and flags deviations instantly.' },
+    { label: 'Live Scoring', desc: 'Movement quality scored rep by rep — live, on dashboard, no delay.' },
+    { label: 'Personalised Baselines', desc: 'The system adapts to each users anatomy and style, not a one-size-fits-all norm.' },
   ]
-
   return (
     <section id="pl1" style={{ padding: '8rem 1.5rem', background: 'rgba(13,198,187,0.02)', borderTop: '1px solid #1a1a1a' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h2 style={{ fontFamily: 'var(--font-space-grotesk)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: '1rem' }}>
-            PL1
+            The Platform: <span className="shimmer-text">PL1</span>
           </h2>
           <p style={{ color: '#666', maxWidth: 520, margin: '0 auto', lineHeight: 1.7, fontSize: '0.95rem' }}>
-            A wearable resistance-training form analyser that gives patients and clinicians
-            real-time biomechanical feedback — built on Arduino, dual IMUs, and personalised ML.
+            A wearable resistance-training form analyser that gives patients and clinicians real-time biomechanical feedback.
           </p>
         </div>
-
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
           {features.map((f, i) => (
             <div key={i} className="feature-card" style={{ padding: '1.75rem', borderRadius: '0.875rem' }}>
               <div style={{ width: 32, height: 32, borderRadius: '50%', border: '1px solid rgba(13,198,187,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
-                <span style={{ fontFamily: 'var(--font-space-grotesk)', fontSize: '0.75rem', color: '#0dc6bb', fontWeight: 700 }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
+                <span style={{ fontFamily: 'var(--font-space-grotesk)', fontSize: '0.75rem', color: '#0dc6bb', fontWeight: 700 }}>{String(i + 1).padStart(2, '0')}</span>
               </div>
               <h3 style={{ fontWeight: 600, marginBottom: '0.5rem', fontSize: '0.95rem' }}>{f.label}</h3>
               <p style={{ color: '#666', fontSize: '0.85rem', lineHeight: 1.6 }}>{f.desc}</p>
             </div>
           ))}
-        </div>
-
-        <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-          <a href="#contact" className="btn-teal px-8 py-4 rounded-full text-sm inline-flex items-center gap-2">
-            Request a Demo
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
         </div>
       </div>
     </section>
@@ -215,49 +119,27 @@ function Contact() {
   }
 
   const inputStyle = {
-    width: '100%',
-    background: '#111',
-    border: '1px solid #1e1e1e',
-    borderRadius: '0.5rem',
-    padding: '0.875rem 1rem',
-    color: '#f0f0f0',
-    fontSize: '0.9rem',
-    outline: 'none',
-    transition: 'border-color 0.2s',
-    fontFamily: 'var(--font-dm-sans)',
+    width: '100%', background: '#111', border: '1px solid #1e1e1e', borderRadius: '0.5rem',
+    padding: '0.875rem 1rem', color: '#f0f0f0', fontSize: '0.9rem', outline: 'none',
+    transition: 'border-color 0.2s', fontFamily: 'var(--font-dm-sans)',
   }
-
   const labelStyle = {
-    display: 'block',
-    fontSize: '0.7rem',
-    letterSpacing: '0.08em',
-    textTransform: 'uppercase' as const,
-    color: '#555',
-    marginBottom: '0.5rem',
-    fontWeight: 600,
+    display: 'block', fontSize: '0.7rem', letterSpacing: '0.08em',
+    textTransform: 'uppercase' as const, color: '#555', marginBottom: '0.5rem', fontWeight: 600,
   }
 
   return (
     <section id="contact" style={{ padding: '8rem 1.5rem', borderTop: '1px solid #1a1a1a', position: 'relative', overflow: 'hidden' }}>
       <div className="glow-orb" style={{ width: 700, height: 700, bottom: '-300px', left: '50%', transform: 'translateX(-50%)', opacity: 0.4 }} />
-
       <div style={{ maxWidth: 780, margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-          <h2 style={{
-            fontFamily: 'var(--font-space-grotesk)',
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            fontWeight: 700,
-            letterSpacing: '-0.03em',
-            marginBottom: '1rem',
-            color: '#f0f0f0',
-          }}>
-            Join the <span className="shimmer-text">Dev-Kit</span> Wait List
+          <h2 style={{ fontFamily: 'var(--font-space-grotesk)', fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: '1rem', color: '#f0f0f0' }}>
+            Join the <span className="shimmer-text">PL1</span> Waitlist
           </h2>
           <p style={{ color: '#555', fontSize: '0.95rem', lineHeight: 1.7, maxWidth: 460, margin: '0 auto' }}>
-            Be first to get access to PL1 hardware, SDK, and early research partnerships.
+            Be first to get access to PL1 hardware and early research partnerships.
           </p>
         </div>
-
         {submitted ? (
           <div style={{ textAlign: 'center', padding: '4rem 2rem', border: '1px solid rgba(13,198,187,0.2)', borderRadius: '1rem', background: 'rgba(13,198,187,0.04)' }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>✓</div>
@@ -269,7 +151,7 @@ function Contact() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }}>
               <div>
                 <label style={labelStyle}>Name</label>
-                <input style={inputStyle} placeholder="Jane Smith" value={form.name}
+                <input style={inputStyle} placeholder="Kyle Smith" value={form.name}
                   onChange={e => setForm({ ...form, name: e.target.value })}
                   onFocus={e => (e.currentTarget.style.borderColor = '#0dc6bb')}
                   onBlur={e => (e.currentTarget.style.borderColor = '#1e1e1e')} />
@@ -301,7 +183,7 @@ function Contact() {
             <div style={{ marginBottom: '2rem' }}>
               <label style={labelStyle}>Tell us about yourself</label>
               <textarea style={{ ...inputStyle, height: 140, resize: 'vertical' }}
-                placeholder="Please tell us a bit about yourself and why you're interested"
+                placeholder="Briefly describe your setting and how movement analytics could help you"
                 value={form.message}
                 onChange={e => setForm({ ...form, message: e.target.value })}
                 onFocus={e => (e.currentTarget.style.borderColor = '#0dc6bb')}
@@ -330,9 +212,6 @@ function Footer() {
           PlatoLabs © {new Date().getFullYear()}
         </span>
       </div>
-      <span style={{ fontSize: '0.8rem', color: '#333' }}>
-        Built with purpose. Powered by data.
-      </span>
     </footer>
   )
 }
