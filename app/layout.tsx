@@ -16,8 +16,11 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: 'PlatoLabs — Where Rehab Meets Intelligence',
-  description:
-    'PlatoLabs is the research hatchery behind ExerSense — building wearable intelligence for rehabilitation, recovery, and human performance.',
+  description: 'PlatoLabs is building wearable intelligence for rehabilitation, recovery, and human performance.',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'PlatoLabs',
     description: 'Wearable intelligence for rehabilitation and human performance.',
