@@ -53,7 +53,7 @@ function HeroStatement() {
           <span className="shimmer-text">Intelligence.</span>
         </h1>
         <p className="animate-fade-up delay-200" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: '#666', lineHeight: 1.8, maxWidth: 520, marginBottom: '3rem' }}>
-          PlatoLabs is a deep-tech engineering wearable systems for rehabilitation, recovery, and human performance.
+          PlatoLabs is engineering wearable systems for rehabilitation, recovery, and human performance tracking.
         </p>
         <div className="animate-fade-up delay-300" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <a href="#contact" className="btn-ghost px-7 py-3.5 rounded-full text-sm inline-flex">Join Waitlist</a>
